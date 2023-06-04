@@ -1,0 +1,10 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="audio" accept="audio/*">
+    <button type="submit">Transcribir</button>
+  </form>
+  
+  {% if text %}
+  <h3>Texto transcrito:</h3>
+  <p>{{ text }}</p>
+{% endif %}
